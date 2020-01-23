@@ -7,6 +7,8 @@
 #define LINK extern
 #endif
 
+#include <stdio.h>
+#include <string.h>
 #include <SmrFramework.h>
 #include <SmrAppFramework.h>
 
