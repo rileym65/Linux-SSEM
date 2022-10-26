@@ -4,8 +4,8 @@ DEFS =
 INCDIR = -I/usr/include/freetype2
 INCS =
 LIBDIR =
-#LIBS = -lSmrFramework -lSmrAppFramework -lX11 -lXft
-LIBS = -lSmrFramework -lSmrAppFramework -lX11
+LIBS = -lSmrFramework -lSmrAppFramework -lX11 -lXft
+#LIBS = -lSmrFramework -lSmrAppFramework -lX11
 DEFS = -std=c++11 -pthread
 OBJS = \
 	Assembler.o \

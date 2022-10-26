@@ -1,0 +1,43 @@
+Command line:
+-------------
+asm [options] sourcename
+
+Command line options:
+---------------------
+  -l  - Show assembly list
+  -L  - Create .lst file
+  -m  - Show input map
+  -M  - Create .map file
+  -s  - Show symbols
+
+Line format:
+------------
+label:  opcode   argument    ; remarks
+
+  Labels and remarks are optional.  A label on a line by itself is also valid
+
+Opcodes:
+--------
+       JMP  ln       - line[ln] -> CI
+       JRP  ln       - CI + line[ln] -> CI
+       LDN  ln       - line[ln] negated -> A
+       STO  ln       - A -> line[ln]
+       SUB  ln       - A - line[ln] -> A
+       CMP           - Skip next if A < 0
+       STP           - Stop machine
+
+Pseudo-ops:
+-----------
+       ORG  nn       - Set assembly address
+label: EQU  nn       - Set label equal to value nn
+       DW   nnnnnnnn - Set numeric 32-bit value
+       REFS          - Write indirect references table
+
+Assembler directives:
+---------------------
+.list         - show listing
+.map          - show input map
+.mapfile      - create map file
+.symbols      - show symbol list
+.lstfile      - generate listing file
+
